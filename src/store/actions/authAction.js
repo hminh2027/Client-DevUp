@@ -38,6 +38,7 @@ export const login = (form) => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
         localStorage.removeItem('FirstLogin')
+        sessionStorage.removeItem('FirstLogin')
         await postAPI('auth/logout')
         window.location.href = '/'
 
