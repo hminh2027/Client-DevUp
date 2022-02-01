@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const domainServer = 'https://nodejs-dev-up.herokuapp.com'
+axios.defaults.withCredentials = true
 
 export const postAPI = async (url, data, token) => {
     const res = await axios.post(`${domainServer}/api/${url}`, data, {
